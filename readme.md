@@ -1,0 +1,10 @@
+# Macroquad Thrusters
+![](https://img.itch.zone/aW1hZ2UvMTY5NzQ4OC8xMDAwMDAxMS5naWY=/250x600/RsDhBn.gif)
+
+This is a very simple project I worked on to help learn Rust, using [macroquad](https://github.com/not-fl3/macroquad). I've also developed a perverse fascination with web-exports, this was also to investigate that somewhat.
+
+[Play on itch.io](https://why485.itch.io/macroquad-thrusters)
+
+The assets folder is missing, since this uses a bunch of Half-Life SFX for added humor. If for some reason you want to compile this, you'll need to edit the `game_sounds.rs` file to use new sounds, or remove the sounds entirely.
+
+Adding Half-Life SFX somehow makes anything funny.
