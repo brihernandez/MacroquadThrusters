@@ -63,7 +63,7 @@ impl GameSounds {
     pub fn play_looping_ambience(&self) {
         for ambient_sound in self.ambience.iter() {
             audio::play_sound(
-                *ambient_sound,
+                &ambient_sound,
                 PlaySoundParams {
                     looped: true,
                     volume: 0.5,
@@ -74,17 +74,17 @@ impl GameSounds {
 
     pub fn play_impact(&self) {
         let sound = self.impact.choose().unwrap();
-        audio::play_sound_once(*sound);
+        audio::play_sound_once(&sound);
     }
 
     pub fn play_sciencist_fear(&self) {
         let sound = self.sci_fear.choose().unwrap();
-        audio::play_sound_once(*sound);
+        audio::play_sound_once(&sound);
     }
 
     pub fn play_jet(&mut self) {
         audio::play_sound(
-            self.jet,
+            &self.jet,
             PlaySoundParams {
                 looped: true,
                 volume: 0.33,
@@ -94,7 +94,7 @@ impl GameSounds {
     }
 
     pub fn stop_jet(&mut self) {
-        audio::stop_sound(self.jet);
+        audio::stop_sound(&self.jet);
         self.is_jet_playing = false;
     }
 
